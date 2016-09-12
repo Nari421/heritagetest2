@@ -2,6 +2,7 @@ package com.example.owl.heritage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //어플 세로고정
 
     }
 
