@@ -3,15 +3,15 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/introimage"
+    android:background="@drawable/intro2"
     >
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="서울 문화재"
         android:textSize="80dp"
-        android:textColor="#EEEEEE"/>
+        android:textColor="#EEEEEE"/>-->
 
 
 

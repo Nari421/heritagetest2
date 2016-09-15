@@ -26,6 +26,7 @@ public class Intro extends Activity {
             startActivity(intent);
             finish();
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out); //overridePendingTransition이란 함수를 이용하여 효과를 줌, 순서가 중요
+
         }
     };
     //인트로 중에 뒤로가기를 누를 경우 핸들러를 끊어버려 아무일 없게 만드는 부분

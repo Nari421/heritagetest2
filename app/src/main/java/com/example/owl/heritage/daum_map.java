@@ -1,5 +1,6 @@
 package com.example.owl.heritage;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -29,6 +30,7 @@ public class daum_map extends AppCompatActivity implements MapView.MapViewEventL
     private double long3 = 126.9951006;
     private double lat4 = 37.5882312;
     private double long4 = 126.9914173;
+    private Context mContext = this;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,6 @@ public class daum_map extends AppCompatActivity implements MapView.MapViewEventL
         arrayList = new ArrayList<>();
         arr1[0] = lat1; arr1[1]= lat2; arr1[2]= lat3; arr1[3]= lat4;
         arr2[0]=long1; arr2[1]= long2; arr2[2]=long3; arr2[3]= long4;
-
     }
     @Override
     public void onMapViewInitialized(MapView mapView) {

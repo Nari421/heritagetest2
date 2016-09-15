@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 
 
 /**
@@ -16,9 +17,11 @@ import android.widget.Button;
 public class Tab_1 extends Fragment implements View.OnClickListener{
 
     private Context mContext;
-    View v;
-    Button button1;
+    private View v;
+    private Button button1 ,add_course;
+    private ListView survey_list;
 
+    private Heritage_DB heritage_db;
 
 
     public Tab_1(Context mContext) {
@@ -31,9 +34,24 @@ public class Tab_1 extends Fragment implements View.OnClickListener{
         v =  inflater.inflate(R.layout.tab_1, container, false);
 
         button1 = (Button) v.findViewById(R.id.map);
-
         button1.setOnClickListener(this);
 
+        add_course=(Button) v.findViewById(R.id.addCourse);         //설문지 추가버튼
+        add_course.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent survey_page = new Intent(mContext, Course_survey.class);
+                startActivity(survey_page);
+            }
+        });
+
+
+        survey_list = (ListView)v.findViewById(R.id.courselistView);
+
+        heritage_db = new Heritage_DB(mContext);
+        //heritage_db.Choice_query(choice_Lv, view, this);
+
+        //listViewCursorAdapter = heritage_db.getListViewCursorAdapter();
 
 
         return  v;

@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:layout_alignParentTop="true" >
 
     <AbsoluteLayout
         android:layout_width="fill_parent"
@@ -25,7 +26,6 @@
         android:onClick="button2Click"
         android:layout_x="210dp"
         android:layout_y="30dp" />
-
     <Button
         android:layout_width="110dp"
         android:layout_height="110dp"
@@ -80,15 +80,6 @@
         android:layout_x="210dp"
         android:layout_y="420dp" />
 
-    <Button
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:text="문묘와 성균관"
-        android:id="@+id/button9"
-        android:onClick="button9Click"
-        android:layout_x="45dp"
-        android:layout_y="550dp" />
-
         <Button
             android:layout_width="110dp"
             android:layout_height="110dp"
@@ -96,7 +87,23 @@
             android:id="@+id/button10"
             android:onClick="button10Click"
             android:layout_x="210dp"
-            android:layout_y="550dp" />
+            android:layout_y="550dp"
+            android:layout_gravity="right|top"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/button1" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:text="문묘와 성균관"
+            android:id="@+id/button9"
+            android:onClick="button9Click"
+            android:layout_x="45dp"
+            android:layout_y="550dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="51dp" />
 
     </AbsoluteLayout>
 
